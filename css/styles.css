@@ -1,0 +1,188 @@
+/* MysticDeck - Custom Palette: #FFE099, #C8ADC0, #543A7E, #25291C */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-sans: 'Poppins', sans-serif;
+  --bg-primary: #25291C;
+  --bg-secondary: #543A7E;
+  --bg-card: rgba(37, 41, 28, 0.90);
+  --accent-gold: #FFE099;
+  --accent-lavender: #C8ADC0;
+  --text-bright: #FFE099;
+  --text-muted: #C8ADC0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-bright);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Containers (Non-transparent solid dark panels) */
+.glass-card {
+  background: rgba(37, 41, 28, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 173, 192, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(255, 224, 153, 0.6);
+  box-shadow: 0 12px 40px rgba(84, 58, 126, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFE099 0%, #C8ADC0 60%, #FFE099 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 3D Tarot Card Container & Sizing */
+.card-scene {
+  perspective: 1000px;
+  width: 240px;
+  height: 410px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .card-scene {
+    width: 270px;
+    height: 460px;
+  }
+}
+
+.tarot-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tarot-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.tarot-card-front, .tarot-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 224, 153, 0.3);
+}
+
+/* Card Back Design */
+.tarot-card-back {
+  background: linear-gradient(145deg, #543A7E, #25291C);
+  border: 2px solid var(--accent-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-pattern-overlay {
+  width: 88%;
+  height: 92%;
+  border: 1px dashed rgba(200, 173, 192, 0.4);
+  border-radius: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(circle, rgba(255, 224, 153, 0.2) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Card Front Design (With clean frame container for image) */
+.tarot-card-front {
+  background: #1c1f15;
+  border: 2px solid var(--accent-gold);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Card Image Fit */
+.tarot-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.85rem;
+  display: block;
+}
+
+/* Reversed Card Image Flip */
+.tarot-card-front img.reversed {
+  transform: rotate(180deg);
+}
+
+/* Shimmer Button Effect */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-btn {
+  background: linear-gradient(90deg, #FFE099 0%, #C8ADC0 50%, #FFE099 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  color: #25291C;
+  font-weight: 700;
+}
+
+.shimmer-btn:hover {
+  box-shadow: 0 0 25px rgba(255, 224, 153, 0.7);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(37, 41, 28, 0.9);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 173, 192, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 224, 153, 0.7);
+}
+
+/* Mood selector active glow */
+.mood-option {
+  transition: all 0.2s ease;
+}
+.mood-option.selected {
+  background-color: rgba(255, 224, 153, 0.2);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 15px rgba(255, 224, 153, 0.35);
+  transform: scale(1.05);
+}
+
+/* Pulse Animation for CTA */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.92; transform: scale(1.02); }
+}
+
+.pulse-cta {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}

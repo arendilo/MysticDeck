@@ -100,7 +100,7 @@
     </section>
 
     <!-- GUIDE & INTRODUCTION SECTION (PLEASE READ & WHO AM I?) -->
-    <section class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+    <section class="glass-card bg-[#25291C]/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl border border-[#C8ADC0]/40">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         
         <!-- Left Column: Please read -->
@@ -141,7 +141,7 @@
     </section>
 
     <!-- CARD DRAWING SECTION -->
-    <section id="cardSection" class="glass-card rounded-3xl p-6 sm:p-8 space-y-8 relative">
+    <section id="cardSection" class="glass-card bg-[#25291C]/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 space-y-8 relative shadow-2xl border border-[#C8ADC0]/40">
       <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#543A7E]/40 rounded-full blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-24 -left-24 w-60 h-60 bg-[#FFE099]/15 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -169,8 +169,8 @@
             </div>
 
             <!-- Front of Card -->
-            <div class="tarot-card-front">
-              <img id="cardImage" src="" alt="Tarot Card" class="w-full h-full object-cover rounded-xl">
+            <div class="tarot-card-front p-1.5 bg-[#1c1f15] border-2 border-[#FFE099]">
+              <img id="cardImage" src="" alt="Tarot Card" class="w-full h-full object-contain rounded-lg">
             </div>
 
           </div>
@@ -231,7 +231,7 @@
     </section>
 
     <!-- DAILY JOURNAL & MOOD TRACKER SECTION -->
-    <section id="journalFormSection" class="glass-card rounded-3xl p-6 sm:p-8 space-y-6 hidden">
+    <section id="journalFormSection" class="glass-card bg-[#25291C]/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl border border-[#C8ADC0]/40 hidden">
       <div class="flex items-center space-x-3 border-b border-[#C8ADC0]/20 pb-4">
         <div class="w-9 h-9 rounded-xl bg-[#FFE099]/20 text-[#FFE099] flex items-center justify-center">
           <i class="fa-solid fa-pen-nib"></i>
@@ -246,27 +246,27 @@
       <div class="space-y-3">
         <label class="block text-xs font-semibold uppercase tracking-wider text-[#C8ADC0]">How Are You Feeling Right Now?</label>
         <div class="grid grid-cols-3 sm:grid-cols-6 gap-2.5" id="moodGrid">
-          <button type="button" data-mood="Peaceful" data-emoji="🌟" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Peaceful" data-emoji="🌟" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">🌟</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Peaceful</span>
           </button>
-          <button type="button" data-mood="Reflective" data-emoji="🌿" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Reflective" data-emoji="🌿" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">🌿</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Reflective</span>
           </button>
-          <button type="button" data-mood="Anxious" data-emoji="💧" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Anxious" data-emoji="💧" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">💧</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Anxious</span>
           </button>
-          <button type="button" data-mood="Energetic" data-emoji="🔥" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Energetic" data-emoji="🔥" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">🔥</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Energetic</span>
           </button>
-          <button type="button" data-mood="Tired" data-emoji="☁️" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Tired" data-emoji="☁️" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">☁️</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Tired</span>
           </button>
-          <button type="button" data-mood="Melancholic" data-emoji="🌙" class="mood-option p-3 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
+          <button type="button" data-mood="Melancholic" data-emoji="🌙" class="mood-option p-3 rounded-2xl bg-[#25291C] border border-[#C8ADC0]/30 text-center hover:border-[#FFE099] transition-all cursor-pointer">
             <span class="text-2xl block mb-1">🌙</span>
             <span class="text-[11px] font-medium text-[#FFE099] block">Melancholic</span>
           </button>
@@ -276,7 +276,7 @@
       <!-- Journal Textarea -->
       <div class="space-y-2">
         <label for="journalInput" class="block text-xs font-semibold uppercase tracking-wider text-[#C8ADC0]">Self-Reflection Notes</label>
-        <textarea id="journalInput" rows="4" placeholder="Write down your thoughts, emotions, or small positive steps you want to take today..." class="w-full rounded-2xl bg-[#25291C]/90 border border-[#C8ADC0]/40 p-4 text-sm text-[#FFE099] placeholder-[#C8ADC0]/60 focus:outline-none focus:border-[#FFE099] focus:ring-1 focus:ring-[#FFE099] transition-all resize-y"></textarea>
+        <textarea id="journalInput" rows="4" placeholder="Write down your thoughts, emotions, or small positive steps you want to take today..." class="w-full rounded-2xl bg-[#25291C] border border-[#C8ADC0]/40 p-4 text-sm text-[#FFE099] placeholder-[#C8ADC0]/60 focus:outline-none focus:border-[#FFE099] focus:ring-1 focus:ring-[#FFE099] transition-all resize-y"></textarea>
       </div>
 
       <!-- Save Journal Action -->
@@ -290,7 +290,7 @@
     </section>
 
     <!-- PRIVATE READING PRICELIST & WHATSAPP CTA SECTION -->
-    <section class="glass-card rounded-3xl p-6 sm:p-8 space-y-8 border border-[#C8ADC0]/40">
+    <section class="glass-card bg-[#25291C]/95 backdrop-blur-md rounded-3xl p-6 sm:p-8 space-y-8 border border-[#C8ADC0]/40 shadow-2xl">
       
       <!-- Section Title -->
       <div class="text-center space-y-2">
@@ -308,7 +308,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         <!-- Package 1: 1-2 Cards -->
-        <div data-pkg="1-2 Cards (Rp 8.000)" class="pricelist-card p-5 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group">
+        <div data-pkg="1-2 Cards (Rp 8.000)" class="pricelist-card p-5 rounded-2xl bg-[#1c1f15] border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group shadow-md">
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-[#FFE099] uppercase tracking-wider">Basic Reading</span>
@@ -324,7 +324,7 @@
         </div>
 
         <!-- Package 2: 3 Cards (Popular) -->
-        <div data-pkg="3 Cards (Rp 10.000)" class="pricelist-card p-5 rounded-2xl bg-[#543A7E]/90 border-2 border-[#FFE099] ring-2 ring-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group relative">
+        <div data-pkg="3 Cards (Rp 10.000)" class="pricelist-card p-5 rounded-2xl bg-[#543A7E] border-2 border-[#FFE099] ring-2 ring-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group relative shadow-lg">
           <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full bg-[#FFE099] text-[#25291C] text-[10px] font-extrabold uppercase tracking-wider">Popular</div>
           <div class="space-y-2">
             <div class="flex items-center justify-between">
@@ -341,7 +341,7 @@
         </div>
 
         <!-- Package 3: 6 Cards -->
-        <div data-pkg="6 Cards (Rp 15.000)" class="pricelist-card p-5 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group">
+        <div data-pkg="6 Cards (Rp 15.000)" class="pricelist-card p-5 rounded-2xl bg-[#1c1f15] border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group shadow-md">
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-[#FFE099] uppercase tracking-wider">Deep Reading</span>
@@ -357,7 +357,7 @@
         </div>
 
         <!-- Package 4: 9 Cards -->
-        <div data-pkg="9 Cards (Rp 20.000)" class="pricelist-card p-5 rounded-2xl bg-[#25291C]/80 border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group">
+        <div data-pkg="9 Cards (Rp 20.000)" class="pricelist-card p-5 rounded-2xl bg-[#1c1f15] border border-[#C8ADC0]/30 hover:border-[#FFE099] transition-all cursor-pointer space-y-3 flex flex-col justify-between group shadow-md">
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-xs font-bold text-[#FFE099] uppercase tracking-wider">Ultimate Spread</span>
@@ -375,7 +375,7 @@
       </div>
 
       <!-- WHATSAPP UPSELL CTA BOX -->
-      <div class="rounded-2xl bg-gradient-to-r from-[#543A7E] via-[#25291C] to-[#543A7E] border border-[#FFE099]/50 p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+      <div class="rounded-2xl bg-gradient-to-r from-[#543A7E] via-[#382159] to-[#543A7E] border border-[#FFE099]/60 p-6 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
         <div class="space-y-1 text-center sm:text-left">
           <h4 class="text-lg font-bold text-[#FFE099]">Ready to be Read by Earen?</h4>
           <p class="text-xs text-[#C8ADC0] font-light">Book your private session on WhatsApp (+62 812-8846-7698). Auto-generated customer code included.</p>
