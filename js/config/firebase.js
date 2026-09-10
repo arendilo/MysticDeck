@@ -1,11 +1,12 @@
 // Firebase Configuration & Compatibility Module for ArcanaReflect
 const firebaseConfig = {
-  apiKey: "AIzaSyYOUR_FIREBASE_API_KEY_HERE",
-  authDomain: "arcanareflect-app.firebaseapp.com",
-  projectId: "arcanareflect-app",
-  storageBucket: "arcanareflect-app.appspot.com",
-  messagingSenderId: "1234567890",
-  appId: "1:1234567890:web:abcdef123456"
+  apiKey: "AIzaSyC3IvOvgqUaqCBv1eFWKFdnYzFLu-_QIl0",
+  authDomain: "mysticdeck-ac9f6.firebaseapp.com",
+  projectId: "mysticdeck-ac9f6",
+  storageBucket: "mysticdeck-ac9f6.firebasestorage.app",
+  messagingSenderId: "783768966765",
+  appId: "1:783768966765:web:d1fc3cc188f01069809164",
+  measurementId: "G-N5X0D6S6VM"
 };
 
 let app = null;
