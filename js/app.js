@@ -335,18 +335,30 @@ async function openHistoryDrawer() {
 }
 
 async function handleGoogleAuth() {
-  if (!window.ArcanaFirebase || !window.ArcanaFirebase.auth) return;
+  if (!window.ArcanaFirebase || !window.ArcanaFirebase.auth) {
+    showAuthError("⚠️ Firebase belum terhubung! Masukkan kredensial Firebase di js/config/firebase.js.");
+    return;
+  }
   try {
     await window.ArcanaFirebase.auth.signInWithPopup(window.ArcanaFirebase.googleProvider);
     authModal.classList.add("hidden");
   } catch (err) {
-    showAuthError("Google Sign-In failed: " + err.message);
+    if (err.code === "auth/unauthorized-domain") {
+      showAuthError("❌ Domain belum di-authorize! Tambahkan domain website ini di Firebase Console -> Authentication -> Settings -> Authorized domains.");
+    } else if (err.code === "auth/operation-not-allowed") {
+      showAuthError("❌ Google Sign-In belum diaktifkan di Firebase Console -> Authentication -> Sign-in method.");
+    } else {
+      showAuthError("Google Sign-In failed: " + err.message);
+    }
   }
 }
 
 async function handleEmailAuth(e) {
   e.preventDefault();
-  if (!window.ArcanaFirebase || !window.ArcanaFirebase.auth) return;
+  if (!window.ArcanaFirebase || !window.ArcanaFirebase.auth) {
+    showAuthError("⚠️ Firebase belum terhubung! Masukkan kredensial Firebase di js/config/firebase.js.");
+    return;
+  }
   const email = authEmail.value;
   const password = authPassword.value;
 
@@ -358,7 +370,11 @@ async function handleEmailAuth(e) {
       await window.ArcanaFirebase.auth.createUserWithEmailAndPassword(email, password);
       authModal.classList.add("hidden");
     } catch (regErr) {
-      showAuthError("Authentication failed: " + regErr.message);
+      if (regErr.code === "auth/operation-not-allowed") {
+        showAuthError("❌ Email/Password auth belum diaktifkan di Firebase Console -> Authentication -> Sign-in method.");
+      } else {
+        showAuthError("Authentication failed: " + regErr.message);
+      }
     }
   }
 }
