@@ -1,5 +1,4 @@
-// Tarot API Handling & Standalone High-Res SVG Vector Generator for MysticDeck
-// Supports all 78 Major & Minor Arcana cards seamlessly (100% reliable, zero 404 errors)
+// Tarot API Handling, Local Asset Loader & High-Res SVG Generator for MysticDeck
 
 function generateTarotCardSVG(cardName, isReversed) {
   const cleanName = cardName.replace(/\(.*?\)/g, "").trim();
@@ -167,7 +166,7 @@ async function fetchDailyTarotCard() {
     };
 
   } catch (error) {
-    console.warn("⚠️ Using Local Deck with Standalone High-Res SVG Vector:", error.message);
+    console.warn("⚠️ Using Local Deck:", error.message);
     const randomIndex = Math.floor(Math.random() * LOCAL_TAROT_DECK.length);
     const localCard = LOCAL_TAROT_DECK[randomIndex];
     const details = isReversed ? localCard.reversed : localCard.upright;
