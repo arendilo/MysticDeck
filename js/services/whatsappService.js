@@ -11,7 +11,7 @@ function buildWhatsAppUrl(customerCode, selectedPackage = "3 Cards (Rp 10.000)",
   const cleanPhone = phoneNumber.replace(/[^0-9]/g, "");
   const pkgText = selectedPackage || "3 Cards (Rp 10.000)";
   
-  let message = `Halo Admin ArcanaReflect! 🔮\n\nSaya tertarik untuk memesan Private Reading (Berbayar) yang lebih mendalam.\n\n★ Kode Unik Customer saya: ${customerCode}\n★ Kartu Hari Ini: ${pkgText}\n\nMohon informasi pilihan paket reading dan langkah pembayarannya. Terima kasih! 💜`;
+  let message = `Halo Admin MysticDeck! 🔮\n\nSaya tertarik untuk memesan Private Reading (Berbayar) yang lebih mendalam.\n\n★ Kode Unik Customer: ${customerCode}\n★ Paket Dipilih: ${pkgText}\n\nMohon informasi untuk langkah selanjutnya. Terima kasih! 💜`;
 
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
